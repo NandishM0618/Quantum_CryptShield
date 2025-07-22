@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quantum-CryptShield 🔐
 
-## Getting Started
+Quantum-CryptShield is a **quantum-inspired, privacy-preserving data sharing system** designed for **IoT networks**. It combines modern encryption techniques, quantum-randomness-based entropy, and post-quantum cryptography (Kyber) to secure data transmission over lightweight protocols like MQTT. It also integrates a quantum-inspired ML model to detect and prevent cyberattacks such as Replay, MITM, and DoS.
 
-First, run the development server:
+---
+
+## 🔧 Features
+
+- **Quantum-Inspired Encryption**
+
+  - AES-256-CBC encryption using quantum-generated randomness (QRNG).
+  - Post-quantum key exchange using Kyber (ML-KEM-768).
+
+- **IoT Integration**
+
+  - Simulated MQTT-based IoT devices securely publish and receive encrypted data.
+  - Replay protection using nonces and timestamps.
+
+- **Cyberattack Detection**
+  - Quantum-inspired machine learning model (QML) trained to detect replay, MITM, and DoS attacks.
+  - Real-time attack logging and mitigation.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- Python >= 3.8 (for ML model)
+- MQTT broker (e.g., Mosquitto or EMQX)
+
+---
+
+### 🛠 Installation
+
+1. **Clone the Repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/NandishM0618/Quantum_CryptShield.git
+cd Quantum-CryptShield
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install Node.js Dependencies**
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Start the MQTT Broker (e.g., Mosquitto)**
 
-## Learn More
+```bash
+mosquitto
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Start Backend Server**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+node server.js
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. **Run IoT Device Simulation**
 
-## Deploy on Vercel
+```bash
+node iot_device.js
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+6. **Train & Run QML Model**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pip install -r requirements.txt
+python train_model.py
+python serve_model.py
+```
