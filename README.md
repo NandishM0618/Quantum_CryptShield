@@ -2,6 +2,9 @@
 
 Quantum-CryptShield is a **quantum-inspired, privacy-preserving data sharing system** designed for **IoT networks**. It combines modern encryption techniques, quantum-randomness-based entropy, and post-quantum cryptography (Kyber) to secure data transmission over lightweight protocols like MQTT. It also integrates a quantum-inspired ML model to detect and prevent cyberattacks such as Replay, MITM, and DoS.
 
+![quant-project](https://github.com/user-attachments/assets/a7f609d3-5511-4adc-a008-1efbec9587a1)
+
+
 ---
 
 ## 🔧 Features
